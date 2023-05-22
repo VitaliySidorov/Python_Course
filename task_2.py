@@ -18,9 +18,9 @@ n = int(getNumber_())
 number = n
 summa = 0
 
-while n> 0: # разбиение числа на цифры по разрядам
+while n > 0: # разбиение числа на цифры по разрядам
     x = n % 10
-    summa = summa+x
-    n = n //10
+    summa = summa + x
+    n = n // 10
     
 print(f'Сумма цифр числа {number} = {summa}')
