@@ -37,8 +37,8 @@ for i in range(n):
     listNumber.append(random.randint(0, numbers))
 
     l = 0
-    while(l<=digit):
-        x.append(str(listNumber[i])[l:digit+l])
+    while(l<=digit): # Разбиваем числа массива на числа разряда равному искомому
+        x.append(str(listNumber[i])[l:digit+l]) 
         l += 1
 
 for j in range(len(x)):
