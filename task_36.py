@@ -17,7 +17,7 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-import os, random
+import os
 
 def clear_console(): # очистка консоли
   os.system('cls')

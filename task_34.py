@@ -11,3 +11,31 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
 # **Вывод:** Парам пам-пам
 
+import os
+
+def clear_console():                        # очистка консоли
+  os.system('cls')
+
+clear_console()
+
+def countSyllable(n):                       # функция подсчета количества гласных в слове
+    countLetters = 0
+    vowels = set("аеёиоуыэюя")
+    for letter in n:
+        if letter in vowels:
+            countLetters += 1
+    return countLetters
+
+#  пара-ра-рам рам-пам-папам па-ра-па-да
+
+verse = input("Винни Пух говорит: ")
+result = verse.split( )                     # разбиваем введенную строку на слова
+
+countS = []
+for i in result:
+    countS.append(countSyllable(i))         # получаем список количества слогов в каждом слове
+
+if (len(set(countS))<=1):                   # проверяем на уникальность списка, если длина множества < или = 1, то количество слогов равны
+    print("Пятачок: Парам пам-пам! :-)")
+else:
+    print("Пятачок: Пам парам :-(")
